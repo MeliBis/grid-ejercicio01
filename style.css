@@ -1,0 +1,130 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor{
+    display: flex;
+    background-color: #333;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+}
+.contenedor h2{
+    color: white;
+   margin: auto 0;
+}
+.contenedor img{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    padding: 2px;
+}
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero{
+    display: grid;    
+    grid-auto-rows: 550px;                  /* por ser contenedor */
+    grid-template-columns: minmax(300px,2fr) 3fr;     /* se colocan 2columas iguales */
+    max-height: 400px;
+}
+.hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+.info{
+    align-self: center;
+}
+.info-title{
+    color: #333;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 24px;
+
+}
+.info-subtitle{
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+.info-btn{
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #c86c90;
+    font-weight: bolder;
+    padding: 12px 24px;
+}
+.travel{                         /* grilla principal */
+    margin:  100px 0;
+
+}
+.travel-imagenes{           
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,100px) );   /* colocar 4 columnas de 1 frac.Ajusta elementos al tamaño del contenedor*/
+    ;   /* colocar 4 columnas de 1 frac.Ajusta elementos al tamaño del contenedor*/
+    grid-auto-rows: 1fr;
+    gap: 25px;
+    justify-content: center;
+}
+.travel-title{
+    color: #333;
+    font-weight: bold;
+    text-align: center;     /* para que este a la mitad */
+    margin-top: 250px;
+
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+.img-travel{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-big{
+    grid-area: 1 / 1 / 3 / 3;  /* inicia fila, inicia fila, termina fia, termina columna */
+}
+.menu{
+    margin-bottom: 200px;
+}
+.menu-title{
+    font-size: 2rem;
+    color: #333;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menu-grid{
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 150px);
+}
+/* .menu-item{
+    background-color: palevioletred;
+    padding: 5px;
+    border-top-left-radius: 40px;
+} */
+.menu-item img{
+    width: 50%;
+    height: 100%;
+    object-fit: contain;        /* img en todo el contenedor/toda img */
+
+}
+@media screen and (max-whidth:768px) {
+    .hero{
+        grid-template-columns: minmax(300px, 500px);
+        justify-content: center;
+    }
+    .hero-img{
+        display: none;             /* elimina img */
+    }
+    .travel-imagenes{
+        grid-template-columns: repeat(auto-fit, minmax(50px,100px) );   /* colocar 4 columnas de 1 frac.Ajusta elementos al tamaño del contenedor*/
+
+    }
+}
